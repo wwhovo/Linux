@@ -1,0 +1,19 @@
+正向代理：代理客户访问服务器（VPN），服务端无感知
+反向代理：代理用户选择服务端的不同服务器，客户端无感知（切换访问不同服务器时，如使用美团的不同功能）
+PHP：一门用于web开发的语言
+WordPress：使用PHP开发的web平台
+
+Nginx：一个反向代理的web服务器，支持高并发
+注意事项：
+虚拟机采用NAT+hostonly网络模式，启用ipv6
+依赖项安装
+注意关闭防火墙或开放端口
+systemctl命令完成服务相关动作
+配置 /nginx/sites-available/default 时listen具体的ip地址并指明端口号，PHP相关段落放开并绑定具体路径下的PHP.sock
+wordpress配置文件修改数据库，用户名，密码三个选项。修改权限
+
+VeryNginx：Nginx扩展程序
+控制台 /verynginx/index.html
+默认账号密码都为verynginx
+启动服务 /opt/verynginx/openresty/nginx/sbin/nginx
+注意修改权限
